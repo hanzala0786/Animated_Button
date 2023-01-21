@@ -1,0 +1,38 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    position: relative;
+    width: fit-content;
+    background-color: rgba(234, 12, 12, 0.755);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: black;
+    z-index: 1;
+    padding: 0.7rem 2.2rem;
+    cursor: pointer;
+    box-shadow: 0.2rem 0.2rem 0.3rem gray;
+    transition: all 0.5s;
+}
+.btn::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+}
+.btn:hover::before {
+    transform: scaleX(1);
+}
+.btn:hover {
+    color: aqua;
+}
